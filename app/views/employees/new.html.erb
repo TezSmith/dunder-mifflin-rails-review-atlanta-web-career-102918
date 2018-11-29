@@ -1,0 +1,12 @@
+<h1>Create Yourself</h1>
+
+<%= form_for @employee do |f| %>
+  First name: <%= f.text_field :first_name %><br />
+  Last name : <%= f.text_field :last_name %><br />
+  Alias : <%= f.text_field :alias %><br />
+  Title : <%= f.text_field :title %><br />
+  Office : <%= f.text_field :office %><br />
+  Photo URL : <%= f.text_field :img_url %><br />
+  Select Dog : <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+  <%= f.submit %>
+<% end %>

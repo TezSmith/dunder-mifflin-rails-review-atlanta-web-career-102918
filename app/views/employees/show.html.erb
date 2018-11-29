@@ -1,0 +1,20 @@
+<h1>ALL ABOUT ME!</h1>
+
+<!-- t.string "first_name"
+t.string "last_name"
+t.string "alias"
+t.string "title"
+t.string "office"
+t.string "img_url" -->
+
+<strong>Name:</strong> <%= @employee.first_name %> <%= @employee.last_name %>
+<br/>
+<strong>Alias:</strong> <%= @employee.alias %>
+<br/>
+<strong>Title:</strong> <%= @employee.title %>
+<br/>
+<strong>Office:</strong> <%= @employee.office %>
+<br/>
+<strong>PHOTO:</strong>
+<br/>
+<img src="<%= @employee.img_url %>" />

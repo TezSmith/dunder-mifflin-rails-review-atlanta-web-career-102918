@@ -1,0 +1,17 @@
+<h1> Edit Employee </h1>
+
+<%= form_tag employee_path(@employee), method: "put" do %>
+  <label>Employee First Name:</label>
+  <%= text_field_tag :first_name, @employee.first_name %><br>
+  <label>Employee Last Name:</label>
+  <%= text_field_tag :last_name, @employee.last_name %><br>
+  <label>Employee Alias:</label>
+  <%= text_field_tag :alias, @employee.alias %><br>
+  <label>Employee Title:</label>
+  <%= text_field_tag :title, @employee.title %><br>
+  <label>Employee Office:</label>
+  <%= text_field_tag :office, @employee.office %><br>
+  <label>Employee Photo URL:</label>
+  <%= text_field_tag :img_url, @employee.img_url %><br>
+  <%= submit_tag %>
+<% end %>
