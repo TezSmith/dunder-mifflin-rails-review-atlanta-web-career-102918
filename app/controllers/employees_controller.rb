@@ -27,6 +27,7 @@ class EmployeesController < ApplicationController
 
   def update
     @employee = Employee.find(params[:id])
+
     if @employee.update(employee_params)
     redirect_to employee_path(@employee)
     else
@@ -37,6 +38,8 @@ class EmployeesController < ApplicationController
   private
 
   def employee_params
+    #Remember the difference between params.require(:resource) vs params.permit
+    #What is the difference? Why do we need to know it?
    params.permit(:first_name, :last_name, :alias, :title, :office, :img_url, :dog_id)
   end
 
